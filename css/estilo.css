@@ -1,163 +1,196 @@
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-    }
-    
-    body {
-        background-color: #ffffff;
-        color: #333;
-    }
-    
-    header {
-        background-color: #05461b;
-        padding: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-    }
-    header.hover {
-        color: #c9f0c1;
-        transform: scale(1.1);
-    }
-    
-    header .logo img {
-        width: 130px;
-    }
-    
-    nav ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-    
-    nav ul li {
-        margin-right: 150px;
-        position: relative;
-    }
-    
-    nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 10px 15px;
-        display: block;
-        transition: color 0.3s, transform 0.3s;
-        border-radius: 4px;
-    }
-    
-    
-    nav ul li a:hover {
-        color: #c9f0c1;
-        transform: scale(1.1);
-    }
-    
-   
-    nav ul li a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background-color: #c9f0c1;
-        left: 0;
-        bottom: 0;
-        transition: width 0.3s;
-    }
-    
-    nav ul li a:hover::after,
-    nav ul li.active a::after {
-        width: 100%;
-    }
-    
-    
-    nav ul li.active a {
-        color: #c9f0c1;
-        font-weight: bold;
-    }
-    .title h1 {
-        font-size: 3em;
-        color: #ffffff;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-        padding: 15px;
-        background: #05461b;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .title h1::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -75%;
-        width: 50%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        transform: skewX(-25deg);
-        transition: left 0.7s ease-in-out;
-    }
-    
-    .title h1:hover::before {
-        left: 125%;
-    }
-    
-    .paragrafo {
-        padding: 20px;
-        font-size: 35px;
-        line-height: 1.6;
-        margin: 0 auto;
-        text-align: relative;
-    }
-    
-    .paragrafo img.imagem {
-        max-width: 60%;
-        height: auto;
-        display: block;
-        margin: 20px 0;
-    }
-@media (max-width: 480px) {
-    header {
-        padding: 20px; /* Reduz o padding no header */
-    }
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-    header .logo img {
-        width: 90px; /* Reduz ligeiramente o tamanho da logo */
-    }
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
 
-    nav ul {
-        flex-direction: row; /* Mantém a navegação em linha */
-        justify-content: space-around; /* Distribui os itens do menu uniformemente */
-        align-items: center;
-    }
+        header {
+            background-color: #05461b;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-    nav ul li {
-        margin-right: 10px; /* Reduz o espaço entre os itens do menu */
-    }
+        header .logo img {
+            width: 130px;
+        }
 
-    nav ul li a {
-        font-size: 14px; /* Reduz o tamanho da fonte */
-        padding: 5px 10px; /* Ajusta o padding para economizar espaço */
-    }
+        header .menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
-    .title h1 {
-        font-size: 2em; /* Reduz o tamanho do título */
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+        header .menu-btn div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
 
-    .paragrafo {
-        font-size: 16px; /* Texto ligeiramente menor em dispositivos móveis */
-        padding: 10px;
-    }
+        nav {
+            display: flex;
+        }
 
-    .paragrafo img.imagem {
-        max-width: 80%; /* Reduz a imagem para 80% da largura para manter a proporção */
-    }
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s, transform 0.3s;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            color: #c9f0c1;
+            transform: scale(1.1);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #c9f0c1;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after,
+        nav ul li.active a::after {
+            width: 100%;
+        }
+
+        nav ul li.active a {
+            color: #c9f0c1;
+            font-weight: bold;
+        }
+
+        .title h1 {
+            font-size: 3em;
+            color: #ffffff;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #05461b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title h1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-25deg);
+            transition: left 0.7s ease-in-out;
+        }
+
+        .title h1:hover::before {
+            left: 125%;
+        }
+
+        .paragrafo {
+            padding: 20px;
+            font-size: 35px;
+            line-height: 1.6;
+            margin: 0 auto;
+            text-align: relative;
+        }
+
+        .paragrafo img.imagem {
+            max-width: 60%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+
+            header .logo img {
+                width: 80px;
+            }
+
+            header .menu-btn {
+                display: flex;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                background-color: #05461b;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                padding: 8px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title h1 {
+                font-size: 1.8em;
+                padding: 8px;
+                margin-bottom: 10px;
+                letter-spacing: 1px;
+            }
+
+            .paragrafo {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
