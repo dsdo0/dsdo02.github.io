@@ -124,37 +124,40 @@
     }
 @media (max-width: 480px) {
     header {
-        padding: 15px; 
+        padding: 20px; /* Reduz o padding no header */
     }
 
     header .logo img {
-        width: 80px; 
+        width: 90px; /* Reduz ligeiramente o tamanho da logo */
     }
 
     nav ul {
-        flex-direction: column; 
-        align-items: flex-start; 
+        flex-direction: row; /* Mantém a navegação em linha */
+        justify-content: space-around; /* Distribui os itens do menu uniformemente */
+        align-items: center;
     }
 
     nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px; 
+        margin-right: 10px; /* Reduz o espaço entre os itens do menu */
     }
 
     nav ul li a {
-        font-size: 16px; 
-        padding: 8px 10px;
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding: 5px 10px; /* Ajusta o padding para economizar espaço */
     }
 
     .title h1 {
-        font-size: 1.8em; 
-        padding: 8px;
+        font-size: 2em; /* Reduz o tamanho do título */
+        padding: 10px;
         margin-bottom: 10px;
-        letter-spacing: 1px;
     }
 
     .paragrafo {
-        font-size: 16px; 
+        font-size: 16px; /* Texto ligeiramente menor em dispositivos móveis */
         padding: 10px;
+    }
+
+    .paragrafo img.imagem {
+        max-width: 80%; /* Reduz a imagem para 80% da largura para manter a proporção */
     }
 }
