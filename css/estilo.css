@@ -8,7 +8,6 @@
     body {
         background-color: #ffffff;
         color: #333;
-        font-size: 16px;
     }
     
     header {
@@ -123,23 +122,3 @@
         display: block;
         margin: 20px 0;
     }
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-}
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 5px;
-    }
-}
