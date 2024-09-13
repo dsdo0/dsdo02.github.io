@@ -29,7 +29,7 @@ function nextQuestion() {
         }
 
         togglePrevButton();
-    }, 500); // Tempo para a animação de fade out
+    }, 500); 
 }
 
 function prevQuestion() {
@@ -49,7 +49,7 @@ function prevQuestion() {
         }
 
         togglePrevButton();
-    }, 500); // Tempo para a animação de fade out
+    }, 500); 
 }
 
 function togglePrevButton() {
@@ -97,7 +97,7 @@ function showVideo() {
     try {
         const context = new (window.AudioContext || window.webkitAudioContext)();
         const gainNode = context.createGain();
-        gainNode.gain.value = 1;  // Volume máximo permitido
+        gainNode.gain.value = 1;  
 
         const source = context.createMediaElementSource(video);
         source.connect(gainNode).connect(context.destination);
@@ -121,5 +121,5 @@ function showVideo() {
     }
 }
 
-// Inicializa o estado dos botões ao carregar a página
+
 togglePrevButton();
